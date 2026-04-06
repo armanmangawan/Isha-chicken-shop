@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Isha Chicken Shop | ताज़ा चिकन | Mangawan, Rewa</title>
+  <meta name="description" content="Isha Chicken Shop Mangawan Rewa - sabse fresh chicken. Online order karein, ghar baithe delivery paayen. Broiler, Desi, Boneless, Curry Cut sab milega. Call: 8959623066" />
+  <meta name="keywords" content="Isha chicken shop mangawan, fresh chicken rewa, online chicken order, desi murga, broiler chicken, chicken delivery rewa, Ward no 2 mangawan" />
+  <meta name="author" content="Isha Chicken Shop Mangawan" />
+
+  <!-- Open Graph (WhatsApp/Facebook preview) -->
+  <meta property="og:title" content="Isha Chicken Shop – Mangawan, Rewa" />
+  <meta property="og:description" content="Ek call mein ghar tak fresh chicken! Order karein abhi. 8959623066" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Hind:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --red:    #c0392b;
+      --dark:   #1a0a00;
+      --warm:   #ff6b2b;
+      --gold:   #f0a500;
+      --cream:  #fff8f0;
+      --card:   #fff3e8;
+      --text:   #2d1a0a;
+      --muted:  #7a5a40;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Hind', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      background: var(--dark);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+    }
+    .header-inner {
+      max-width: 1000px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .logo {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+    .logo span { color: var(--warm); }
+    .logo small { display: block; font-size: 0.75rem; font-weight: 400; color: #ccc; }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--gold); }
+
+    .call-btn {
+      background: var(--red);
+      color: white !important;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .call-btn:hover { background: var(--warm); transform: scale(1.04); }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(135deg, #1a0a00 0%, #3d1500 50%, #1a0a00 100%);
+      color: white;
+      text-align: center;
+      padding: 70px 20px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "🍗";
+      font-size: 14rem;
+      position: absolute;
+      opacity: 0.07;
+      top: -20px; right: -30px;
+      animation: spin 20s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .hero h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      animation: fadeUp 0.7s ease both;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      margin: 18px auto 30px;
+      max-width: 540px;
+      font-size: 1.1rem;
+      color: #f0d8c0;
+      animation: fadeUp 0.9s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 20px rgba(192,57,43,0.5);
+      animation: fadeUp 1.1s ease both;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(192,57,43,0.6); }
+    .btn-outline {
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      padding: 13px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background 0.2s, color 0.2s;
+      animation: fadeUp 1.2s ease both;
+    }
+    .btn-outline:hover { background: var(--gold); color: var(--dark); }
+
+    /* ─── BADGES ─── */
+    .badges {
+      background: var(--warm);
+      padding: 12px 20px;
+      text-align: center;
+      font-weight: 600;
+      color: white;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+    .badges span { margin: 0 12px; }
+
+    /* ─── SECTION TITLES ─── */
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    .sec-title {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+    .sec-sub { color: var(--muted); margin-bottom: 32px; font-size: 1rem; }
+
+    /* ─── MENU CARDS ─── */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .menu-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px 18px 20px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: transform 0.25s, box-shadow 0.25s;
+      border: 2px solid transparent;
+    }
+    .menu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(192,57,43,0.15);
+      border-color: var(--warm);
+    }
+    .menu-icon { font-size: 3rem; margin-bottom: 10px; }
+    .menu-name {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .menu-name-en { font-size: 0.8rem; color: var(--muted); margin: 2px 0; }
+    .menu-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--red);
+      margin-top: 8px;
+    }
+    .menu-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-top: 6px;
+    }
+
+    /* ─── ORDER FORM ─── */
+    #order { background: var(--dark); border-radius: 24px; padding: 50px 30px; color: white; max-width: 1000px; margin: 0 auto 60px; }
+    #order .sec-title { color: var(--gold); }
+    #order .sec-sub { color: #ccc; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    label { font-size: 0.88rem; color: #ccc; font-weight: 600; }
+    input, select, textarea {
+      background: rgba(255,255,255,0.08);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: white;
+      font-size: 1rem;
+      font-family: 'Hind', sans-serif;
+      transition: border 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+    select option { background: var(--dark); color: white; }
+    textarea { resize: vertical; min-height: 80px; }
+
+    .submit-btn {
+      grid-column: 1 / -1;
+      background: var(--red);
+      color: white;
+      border: none;
+      padding: 16px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      font-family: 'Baloo 2', cursive;
+      letter-spacing: 0.5px;
+    }
+    .submit-btn:hover { background: var(--warm); transform: scale(1.02); }
+
+    /* ─── WHY US ─── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .why-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+    .why-card .icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .why-card h3 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.1rem;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+    .why-card p { font-size: 0.9rem; color: var(--muted); }
+
+    /* ─── CONTACT ─── */
+    .contact-box {
+      background: linear-gradient(135deg, var(--red), #8b1a1a);
+      color: white;
+      border-radius: 24px;
+      padding: 48px 32px;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+    }
+    .contact-box h2 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .contact-box p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 28px; }
+    .contact-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .contact-link {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: background 0.2s;
+    }
+    .contact-link:hover { background: rgba(255,255,255,0.3); }
+    .address-info { margin-top: 24px; font-size: 0.95rem; opacity: 0.85; line-height: 1.8; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--dark);
+      color: #888;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.85rem;
+    }
+    footer span { color: var(--gold); }
+
+    /* ─── SUCCESS MSG ─── */
+    #success-msg {
+      display: none;
+      background: #27ae60;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-top: 16px;
+      grid-column: 1 / -1;
+    }
+
+    /* ─── SCROLL TOP ─── */
+    .scroll-top {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      background: var(--red);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 46px; height: 46px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 200;
+      transition: background 0.2s;
+    }
+    .scroll-top:hover { background: var(--warm); }
+
+    @media (max-width: 600px) {
+      .header-inner { justify-content: center; text-align: center; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      🍗 <span>Isha</span> Chicken Shop<br>
+      <small>Ward No.2, Mangawan, Rewa</small>
+    </div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order करें</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+918959623066" class="call-btn">📞 Call Now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- BADGES -->
+<div class="badges">
+  <span>✅ 100% Fresh</span>
+  <span>🚚 Home Delivery</span>
+  <span>⚡ Same Day Order</span>
+  <span>🏆 Best Quality</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Mangawan का सबसे<br><span>ताज़ा चिकन</span> यहाँ मिलता है!</h1>
+  <p>रोज़ सुबह ताज़ा चिकन आता है। घर बैठे Order करें, हम पहुंचाएंगे आपके दरवाज़े तक।</p>
+  <div class="hero-btns">
+    <a href="#order" class="btn-primary">🛒 अभी Order करें</a>
+    <a href="#menu" class="btn-outline">📋 Menu देखें</a>
+  </div>
+</div>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="sec-title">🍖 हमारा Menu</div>
+  <div class="sec-sub">सभी प्रकार का ताज़ा चिकन उचित दामों पर</div>
+  <div class="menu-grid">
+
+    <div class="menu-card">
+      <div class="menu-icon">🐔</div>
+      <div class="menu-name">ब्रॉयलर चिकन</div>
+      <div class="menu-name-en">Broiler Chicken</div>
+      <div class="menu-price">₹180/kg</div>
+      <div class="menu-tag">सबसे Popular</div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-icon">🐓</div>
+      <div class="menu-name">देसी मुर्गा</div>
+      <div class="menu-name-en">Desi Murga</div>
+      <div class="menu-price">₹400/kg</div>
+      <div class="menu-tag">Natural</div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-icon">🍗</div>
+      <div class="menu-name">बोनलेस चिकन</div>
+      <div class="menu-name-en">Boneless Chicken</div>
+      <div class="menu-price">₹280/kg</div>
+      <div class="menu-tag">Best Seller</div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-icon">🍲</div>
+      <div class="menu-name">करी कट</div>
+      <div class="menu-name-en">Curry Cut</div>
+      <div class="menu-price">₹200/kg</div>
+      <div class="menu-tag">Ready to Cook</div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-icon">🦴</div>
+      <div class="menu-name">चिकन लेग पीस</div>
+      <div class="menu-name-en">Leg Piece</div>
+      <div class="menu-price">₹220/kg</div>
+      <div class="menu-tag">Special</div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-icon">🥩</div>
+      <div class="menu-name">मटन</div>
+      <div class="menu-name-en">Mutton</div>
+      <div class="menu-price">₹700/kg</div>
+      <div class="menu-tag">Premium</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<div id="order">
+  <div class="sec-title">🛒 Online Order करें</div>
+  <div class="sec-sub">नाम, पता और चाहिए क्या — बस इतना बताएं, हम पहुंचाएंगे!</div>
+  <div class="form-grid">
+
+    <div class="form-group">
+      <label>आपका नाम *</label>
+      <input type="text" id="name" placeholder="जैसे: Ramesh Kumar" required />
+    </div>
+
+    <div class="form-group">
+      <label>मोबाइल नंबर *</label>
+      <input type="tel" id="phone" placeholder="10 अंकों का नंबर" required />
+    </div>
+
+    <div class="form-group">
+      <label>चिकन का प्रकार *</label>
+      <select id="item">
+        <option value="">-- Select करें --</option>
+        <option>ब्रॉयलर चिकन (₹180/kg)</option>
+        <option>देसी मुर्गा (₹400/kg)</option>
+        <option>बोनलेस चिकन (₹280/kg)</option>
+        <option>करी कट (₹200/kg)</option>
+        <option>चिकन लेग पीस (₹220/kg)</option>
+        <option>मटन (₹700/kg)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>कितना चाहिए? (kg में)</label>
+      <input type="number" id="qty" placeholder="जैसे: 1, 1.5, 2" min="0.5" step="0.5" />
+    </div>
+
+    <div class="form-group full">
+      <label>पूरा पता (Delivery Address) *</label>
+      <textarea id="address" placeholder="मोहल्ला, गली, Mangawan..."></textarea>
+    </div>
+
+    <button class="submit-btn" onclick="submitOrder()">
+      🚀 Order भेजें — WhatsApp पर
+    </button>
+    <div id="success-msg">✅ आपका Order भेजा जा रहा है WhatsApp पर!</div>
+
+  </div>
+</div>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="sec-title">🏆 हमें क्यों चुनें?</div>
+  <div class="sec-sub">Mangawan में सबसे भरोसेमंद चिकन की दुकान</div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="icon">🌅</div>
+      <h3>रोज़ ताज़ा</h3>
+      <p>हर दिन सुबह ताज़ा चिकन आता है, पुराना कभी नहीं</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">⚖️</div>
+      <h3>सही तौल</h3>
+      <p>पक्का वज़न, कोई धोखा नहीं — हर बार सही</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🚚</div>
+      <h3>Home Delivery</h3>
+      <p>Mangawan में घर तक delivery, अभी call करें</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">💰</div>
+      <h3>उचित दाम</h3>
+      <p>Market rate पर, कोई extra charge नहीं</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-box" id="contact">
+  <h2>📞 अभी संपर्क करें</h2>
+  <p>Order के लिए Call करें या WhatsApp पर message करें</p>
+  <div class="contact-links">
+    <a href="tel:+918959623066" class="contact-link">📞 Call करें</a>
+    <a href="https://wa.me/918959623066?text=Chicken%20Order%20karna%20hai" class="contact-link" target="_blank">💬 WhatsApp</a>
+  </div>
+  <div class="address-info">
+    📍 Ward No.2, Mangawan, Rewa, Madhya Pradesh<br>
+    🕗 खुलने का समय: सुबह 7 बजे – रात 9 बजे (रोज़ाना)
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <span>Isha Chicken Shop</span> – Ward No.2, Mangawan, Rewa | Designed with ❤️</p>
+  <p style="margin-top:6px;">Fresh Chicken · Home Delivery · Mangawan · Rewa · Madhya Pradesh</p>
+</footer>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scrollBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- SCHEMA (Google SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "Isha Chicken Shop",
+  "description": "Isha Chicken Shop - Mangawan Rewa ka sabse fresh chicken shop with home delivery",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ward No. 2",
+    "addressLocality": "Mangawan",
+    "addressRegion": "Rewa, Madhya Pradesh",
+    "addressCountry": "IN"
+  },
+  "telephone": "+918959623066",
+  "openingHours": "Mo-Su 07:00-21:00",
+  "servesCuisine": "Chicken, Mutton",
+  "priceRange": "₹₹"
+}
+</script>
+
+<script>
+  // Scroll top button
+  window.addEventListener('scroll', () => {
+    document.getElementById('scrollBtn').style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  // Order form → WhatsApp
+  function submitOrder() {
+    const name    = document.getElementById('name').value.trim();
+    const phone   = document.getElementById('phone').value.trim();
+    const item    = document.getElementById('item').value;
+    const qty     = document.getElementById('qty').value;
+    const address = document.getElementById('address').value.trim();
+
+    if (!name || !phone || !item || !address) {
+      alert('कृपया सभी ज़रूरी जानकारी भरें (नाम, नंबर, चिकन का प्रकार, पता)');
+      return;
+    }
+
+    const msg = `🍗 *नया Order*\n\n👤 नाम: ${name}\n📞 Mobile: ${phone}\n🛒 Item: ${item}\n⚖️ Qty: ${qty || '1'} kg\n📍 Address: ${address}`;
+    const url = `https://wa.me/918959623066?text=${encodeURIComponent(msg)}`;
+
+    document.getElementById('success-msg').style.display = 'block';
+    setTimeout(() => window.open(url, '_blank'), 800);
+  }
+</script>
+
+</body>
+</html>
